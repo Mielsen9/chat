@@ -1,20 +1,16 @@
 import http from 'http';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import { Server as SocketIOServer } from 'socket.io';
 import app from './app';
+import {initSocket} from "./sockets /socketHandler";
 
 dotenv.config();
 
 const PORT = process.env.PORT || 5000;
 const server = http.createServer(app);
 
-const io = new SocketIOServer(server, {
-  cors: {
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST"]
-  }
-});
+// Ініціалізація Socket.IO
+initSocket(server);
 
 mongoose.connect(process.env.MONGO_URI as string)
   .then(() => {
