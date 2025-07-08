@@ -2,6 +2,7 @@ import React from "react";
 import * as s from './Chat.module.scss'
 import useChat from "@/features/Chat";
 import SendButton from "@/components/atoms/SendButton";
+import MessageInput from "@/components/atoms/MessageInput";
 
 // Type
 interface Props {
@@ -24,12 +25,7 @@ const Chat: React.FC<Props> = (props) => {
         ))}
       </div>
 
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-      />
+      <MessageInput input={input} setInput={setInput} handleSend={handleSend }/>
       <SendButton handleSend={handleSend} />
     </div>
   )
