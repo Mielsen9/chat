@@ -1,6 +1,6 @@
 import React, {FC} from "react";
 import * as s from './Main.module.scss'
-import Chat from "@/components/molecules/Chat";
+import Chat from "@/components/organisms/Chat";
 
 
 // Type

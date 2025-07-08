@@ -1,6 +1,7 @@
 import React from "react";
 import * as s from './Chat.module.scss'
 import useChat from "@/features/Chat";
+import SendButton from "@/components/atoms/SendButton";
 
 // Type
 interface Props {
@@ -29,7 +30,7 @@ const Chat: React.FC<Props> = (props) => {
         onChange={(e) => setInput(e.target.value)}
         onKeyDown={(e) => e.key === 'Enter' && handleSend()}
       />
-      <button onClick={handleSend}>Send</button>
+      <SendButton handleSend={handleSend} />
     </div>
   )
 }
