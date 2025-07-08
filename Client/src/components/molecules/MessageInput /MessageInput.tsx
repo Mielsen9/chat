@@ -1,4 +1,6 @@
 import * as s from './MessageInput.module.scss'
+import SendButton from "@/components/atoms/SendButton";
+import TextField from "@/components/atoms/TextField";
 import React from "react";
 
 // Type
@@ -8,24 +10,16 @@ interface Props {
   handleSend: () => void;
 }
 
-// MessageInput
+// TextField
 const MessageInput: React.FC<Props> = (props) => {
   const {input, setInput, handleSend} = props
 
   return (
     <div className={s.MessageInput}>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) =>
-          setInput(e.target.value)
-        }
-        onKeyDown={(e) =>
-          e.key === 'Enter' && handleSend()
-        }
-      />
+      <TextField input={input} setInput={setInput} handleSend={handleSend }/>
+      <SendButton handleSend={handleSend} />
     </div>
   )
 }
 
-export default MessageInput
+export default MessageInput 

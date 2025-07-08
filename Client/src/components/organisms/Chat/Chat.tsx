@@ -1,8 +1,7 @@
 import React from "react";
 import * as s from './Chat.module.scss'
 import useChat from "@/features/Chat";
-import SendButton from "@/components/atoms/SendButton";
-import MessageInput from "@/components/atoms/MessageInput";
+import MessageInput from "@/components/molecules/MessageInput ";
 
 // Type
 interface Props {
@@ -14,7 +13,7 @@ const Chat: React.FC<Props> = (props) => {
   const {chatId} = props
 
   const { messages, input, setInput, handleSend } = useChat(chatId);
-
+  // Return
   return (
     <div className={s.Chat}>
       <div className={s.messageContainer}>
@@ -25,8 +24,7 @@ const Chat: React.FC<Props> = (props) => {
         ))}
       </div>
 
-      <MessageInput input={input} setInput={setInput} handleSend={handleSend }/>
-      <SendButton handleSend={handleSend} />
+      <MessageInput input={input} setInput={setInput} handleSend={handleSend}/>
     </div>
   )
 }
