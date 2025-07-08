@@ -13,7 +13,7 @@ const Main: FC<Props> = (props) => {
   const {} = props
 
   return (
-    <div className={s.Main}>
+    <div className={`${s.Main} ${s.wrapper}`}>
       <Chat chatId={"1"}/>
     </div>
   )
