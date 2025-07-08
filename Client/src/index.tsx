@@ -1,5 +1,5 @@
 import React from 'react';
-import "@/App/scss/style.scss";
+import "@/scss/style.scss";
 import {createRoot} from 'react-dom/client';
 import {RouterProvider} from "react-router-dom";
 

@@ -51,5 +51,18 @@ return{
     devtool: isDev ? 'inline-source-map' : 'source-map',
     // DevServer
     devServer: isDev ? buildDevServer(options) : undefined,
+
+    watchOptions: {
+        ignored: [
+            '**/node_modules/**',
+            '**/.git/**',
+            '**/dist/**',
+            '**/build/**',
+            '**/.idea/**',
+            '**/.cache/**',
+        ],
+        poll: 1000,
+        aggregateTimeout: 300,
+    },
 }
 }

@@ -7,7 +7,7 @@ let io: Server;
 export const initSocket = (server: any) => {
   io = new Server(server, {
     cors: {
-      origin: '*', // обмежити під свій фронтенд на проді
+      origin: 'http://localhost:8081', // обмежити під свій фронтенд на проді
       methods: ['GET', 'POST']
     }
   });
