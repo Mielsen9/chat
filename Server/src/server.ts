@@ -6,7 +6,7 @@ import {initSocket} from "./sockets /socketHandler";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5030;
 const server = http.createServer(app);
 
 // Ініціалізація Socket.IO
