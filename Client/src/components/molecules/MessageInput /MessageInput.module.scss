@@ -1,3 +1,24 @@
 .MessageInput {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+}
+.MessageInputContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  padding: 5px;
+}
+.TextField {
+  width: 70%;
+}
+.SendButton {
+  width: 60px;
 }

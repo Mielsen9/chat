@@ -17,6 +17,7 @@ const TextField: React.FC<Props> = (props) => {
       <input
         type="text"
         value={input}
+        placeholder="Напишіть повідомлення..."
         onChange={(e) =>
           setInput(e.target.value)
         }

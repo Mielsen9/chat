@@ -16,8 +16,14 @@ const MessageInput: React.FC<Props> = (props) => {
 
   return (
     <div className={s.MessageInput}>
-      <TextField input={input} setInput={setInput} handleSend={handleSend }/>
-      <SendButton handleSend={handleSend} />
+      <div className={s.MessageInputContainer}>
+        <div className={s.TextField}>
+          <TextField input={input} setInput={setInput} handleSend={handleSend }/>
+        </div>
+        <div className={s.SendButton}>
+          <SendButton handleSend={handleSend} />
+        </div>
+      </div>
     </div>
   )
 }
