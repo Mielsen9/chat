@@ -8,7 +8,7 @@ export const useSocket = (
   const socket = useRef<Socket | null>(null);
 
   useEffect(() => {
-    socket.current = io('http://localhost:5000'); // заміни на свій бекенд
+    socket.current = io('http://localhost:5001'); // заміни на свій бекенд
 
     socket.current.emit('join_chat', chatId);
 
