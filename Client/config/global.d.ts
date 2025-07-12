@@ -6,6 +6,11 @@ declare module '*.module.scss' {
     export = classNames;
 }
 
+declare module "*.svg?url" {
+    const content: string;
+    export default content;
+}
+
 declare module '*.webp';
 declare module '*.png';
 declare module '*.jpg';

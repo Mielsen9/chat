@@ -1,16 +1,18 @@
 .ChatHeader {
-  height: 60px;
-  width: 100%;
   background-color: lightgray;
-  padding: 20px;
+  padding: 5px;
   box-sizing: border-box;
 }
 .ChatHeaderContainer {
   width: 100%;
+  display: flex;
+  align-items: center;
 }
-//.Avatar {
-//
-//}
-//.Name {
-//
-//}
+.Avatar {
+  height: 50px;
+  width: 50px;
+  margin: 0 10px;
+}
+.Name {
+font-weight: bold;
+}
