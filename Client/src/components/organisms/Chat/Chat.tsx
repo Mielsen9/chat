@@ -21,8 +21,9 @@ const Chat: React.FC<Props> = (props) => {
       <ChatHeader/>
 
       <ChatWindow messages={messages}/>
-
-      <MessageInput input={input} setInput={setInput} handleSend={handleSend}/>
+      <div className={s.MessageInput}>
+        <MessageInput input={input} setInput={setInput} handleSend={handleSend}/>
+      </div>
     </div>
   )
 }
